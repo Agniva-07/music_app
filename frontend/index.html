@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dil Khush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">  
+        <h1>🎵 Dil Khush 🎵</h1>
+        <div class="artists-container">
+            <div class="artist" onclick="showSongs('Arijit Singh')">
+                <img src="https://wallpapers.com/images/featured/arijit-singh-q307hnimzo1z26ct.webp" alt="Arijit Singh">
+                <p class="artist-name">Arijit Singh</p>
+            </div>
+            <div class="artist" onclick="showSongs('Kishore Kumar')">
+                <img src="https://imgs.search.brave.com/W-ns--DS4kB6MJah4LSGp1a50ETJCxrzeqIrF_rQdUM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuamF2YXRwb2lu/dC5jb20vYmlvZ3Jh/cGh5L2ltYWdlcy9r/aXNob3JlLWt1bWFy/LmpwZw" alt="Kishore Kumar">
+                <p class="artist-name">Kishore Kumar</p>  
+            </div>
+            <div class="artist" onclick="showSongs('Shreya Ghosal')">
+                <img src="https://imgs.search.brave.com/kPqyoAjtdxHfw4YP5rk1ZXA5vBpeoB1ekU-jfpXCT4Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2I3Lzgw/L2ZhL2I3ODBmYTBh/MjhlOWRlMTQ4Y2Ex/ZGM5MDVkMDViMzhj/LmpwZw" alt="Shreya Ghosal">
+                <p class="artist-name">Shreya Ghosal</p>
+            </div>
+        </div>
+        
+        <div class="songlist-container">
+            <ul id="song-list"></ul>
+        </div>         
+        <div class="buttons-container">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="controller">   
+                <button class="button prev">⏮️</button>
+                <button class="button play">▶️</button>
+                <button class="button next">⏭️</button>
+                <audio id="audio-player"></audio> <!-- ✅ Removed controls -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
