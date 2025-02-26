@@ -19,16 +19,28 @@ body {
     transform: scale(1.1);
 }
 .artist img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 150px;
+    height: 150px;      
+    margin: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    object-fit:fill;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+.artist img:hover {
+    transform: scale(1.1);
+    background: rgba(0, 0, 255, 0.6);
+    box-shadow: 0 0 15px rgba(0, 0, 255, 1);
 }
 .artist-name {
     color: white;
     font-size: 16px;
     margin-top: 5px;
+    margin-bottom: 50px;
+}
+.artist-name:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 255, 1);
 }
 
 .player-container {
