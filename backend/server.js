@@ -67,28 +67,23 @@ app.get("/artists", (req, res) => {
 });
 
 // 🎤 ✅ API to get songs by artist
-app.get("/songs/:artist", (req, res) => {
-    const artist = req.params.artist;
-    const artistPath = path.join(musicFolder, artist);
+app.get('/songs/:artist', (req, res) => {
+    const artistName = decodeURIComponent(req.params.artist);
+    const artistFolder = path.join(__dirname, 'music', artistName);
 
-    if (!fs.existsSync(artistPath) || !fs.statSync(artistPath).isDirectory()) {
-        return res.status(404).json({ error: "Artist not found." });
+    if (!fs.existsSync(artistFolder)) {
+        return res.status(404).json({ error: "Artist folder not found" });
     }
 
-    fs.readdir(artistPath, (err, files) => {
+    fs.readdir(artistFolder, (err, files) => {
         if (err) {
-            console.error("Error reading artist directory:", err);
-            return res.status(500).json({ error: "Unable to read artist directory" });
+            return res.status(500).json({ error: "Error reading directory" });
         }
 
-        const artistSongs = files
-            .filter(file => file.endsWith(".mp3"))
-            .map(file => ({
-                name: file.replace(/.mp3$/, ""),
-                url: `http://localhost:${PORT}/music/${artist}/${file}`
-            }));
+        // Yeh line fix kar: bas filenames bhej
+        const mp3Files = files.filter(file => file.endsWith('.mp3'));
 
-        res.json(artistSongs);
+        res.json(mp3Files);
     });
 });
 
