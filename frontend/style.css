@@ -1,6 +1,9 @@
 /* Full-page background */
 body {
-    background: linear-gradient(135deg, #1a1a2e, #1e1e43, #151529, rgb(19, 19, 19));
+        background: url('https://images.hdqwalls.com/wallpapers/anime-night-scenery-8r.jpg');
+        background-size: cover; /* Cover full screen */
+        background-position: center; /* Center image */
+        background-attachment: fixed; /* Fixed background */
     height: 100vh;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
@@ -34,7 +37,7 @@ body {
 }
 .artist-name {
     color: white;
-    font-size: 16px;
+    font-size: 20.5px;
     margin-top: 5px;
     margin-bottom: 50px;
 }
@@ -52,12 +55,13 @@ body {
     padding-left: 60px;
     border-radius: 20px;
     color: aliceblue;
-    background: rgba(20, 20, 40, 0.6); /* Dark translucent */
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 15px rgba(90, 30, 150, 0.5); /* Neon glow effect */
-    
 }
-
+.player-container h1 {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+}
 /* Gradient Buttons */
 .buttons-container {
     margin-top: 15px;
@@ -92,7 +96,7 @@ button:hover {
     margin: auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
     border-radius: 10px;
     height: 600px;
     overflow-y: auto;
@@ -103,7 +107,7 @@ button:hover {
     max-height: 500px;
     overflow-y: auto;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(7px);
     border-radius: 10px;
     padding: 10px;
 }
@@ -111,15 +115,17 @@ button:hover {
 /* Custom Scroll */
 #song-list::-webkit-scrollbar {
     width: 3px;
-}
-
-#song-list::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
 }
+
+/* #song-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+} */
 /* Song Items */
 .song-item {
-    font-size: 1rem;
+    font-size: 18px;
     color: #fff;
     padding: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);

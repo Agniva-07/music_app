@@ -5,7 +5,7 @@ const playButton = document.querySelector(".play");
 const nextButton = document.querySelector(".next");
 const prevButton = document.querySelector(".prev");
 
-let songs = [];
+let songs = []; 
 let currentSongIndex = 0;
 
 console.log("JavaScript Loaded! ✅");
